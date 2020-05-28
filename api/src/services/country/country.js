@@ -1,6 +1,6 @@
 import fetch from 'node-fetch'
 
-import CountryInfo from 'src/services/country/countryInfo.json'
+import CountryInfo from './countryInfo'
 
 export const getCountry = async ({ id }) => {
   const countryCode = id.match(/^[a-z]{2}$/i)
