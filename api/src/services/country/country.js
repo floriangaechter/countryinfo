@@ -12,6 +12,7 @@ export const getCountry = async ({ id }) => {
       `https://api.mapbox.com/geocoding/v5/mapbox.places/${id}.json?types=country&access_token=${process.env.MAPBOX_API_KEY}`
     )
     const json = await response.json()
+    console.log(json)
     id = json.features[0].properties.short_code
   }
 
